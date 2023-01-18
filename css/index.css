@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* #section .article1 { } */
+#container{ width:600px; margin: 0 auto;}
+.article1{height: 400px; width: 100%; overflow: hidden;} /* overflow 되면 숨긴다*/
+.slide_group{ 
+    display: flex; height: 400px; width: 2560px;
+    transition-property: transform; /* transform 속성에대해, js코드에 의해 transform 스타일 추가된다*/
+    transition-duration: 1s; /* transition 지속시간 */
+}
+#section .slide { position:relative; width: 600px; height: 400px; background-size:cover; background-position:center;}
+#section .slide:nth-child(1) {  background-image: url(../img/main_img1.jpg); }
+#section .slide:nth-child(2) { background-image: url(../img/main_img2.jpg); }
+#section .slide:nth-child(3) { background-image: url(../img/main_img3.jpg); }
+#section .article1 .slide .slide_text {
+    position: absolute; top:50%; transform: translateY(-50%); color:#fff; text-align: center;
+    width:100%;
+}
+#section .article1 .slide .slide_text h2 {
+    font-size:42px; font-weight: 800; }
+.article1 .slide .slide_text p {
+    font-size:16px; line-height:24px; font-weight: 400; margin:30px 0;
+}
+.article1 .slide .slide_text a {
+    display: inline-block; padding:10px 35px; border:1px solid #fff; font-size:15px; 
+    transition:all 0.2s;
+}
+.article1 .slide .slide_text a:hover { background:rgba(255,255,255,0.3); }

@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.row { max-width:1200px; margin:0 auto; padding:0 10px;}
+
+#header .top_menu {
+    background-color: #f3f3f3;
+    text-align:right;
+}
+#header .top_menu a { padding:7px 20px; display: inline-block; border-right:1px solid #e3e3e3;}
+#header .top_menu .row { position:relative;}
+#header .top_menu a:nth-of-type(1) {
+    border-left:1px solid #e3e3e3;
+}
+#header .top_menu a:hover { color:#dbb075;}
+
+/* 검색창(.search) */
+#header .search {
+    position:absolute;
+    right:388px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+#header .search #sbox {
+    width:0; border:none; outline: none; text-indent: 1em; position:absolute;;
+}
+#header .search.on #sbox { width:169px; right:27px;}
+#header .search label { cursor:pointer;}
+
+/* 로고와 네비게이션 */
+#header > .row { position: relative; z-index: 9;}
+#header h1 { padding:25px 0;}
+#header #nav { position:absolute; font-size:18px; color:#1e1e1e; top:50%; transform: translateY(-50%);}
+#header #nav .depth1 { padding:0 0 0 300px;}
+#header #nav .depth1 > li { display: inline-block; position:relative;}
+#header #nav .depth1 > li:hover .depth2 { }
+#header #nav .depth1 > li > a { display: block; padding:20px 40px; margin-top:10px; }
+#header #nav .depth1 > li:hover > a { color:#00529b;}
+#header .depth2 { position:absolute; top:100%; ; width:100%; z-index: 9; color:#fff;
+background:#555; text-align: center; font-size:14px; display: none;;}
+#header .depth2 a { 
+    padding:18px 0; display: block;
+    border-bottom:1px solid #999;
+    transition:all 0.5s;
+}
+#header .depth2 > li:last-child > a { border-bottom:none;}
+#header .depth2 > li:hover a { background:#00529b; color:#dfe9fe;}
+
+/* footer */
+#footer { background:#1e1e1e; color:#fff;}
+#footer > .row { text-align: center;;}
+#footer .sns { padding:50px 0 0;}
+#footer .sns > a { width:30px; height:30px; }
+#footer .sns > a > i { font-size:30px;}
+#footer .sns > a ~ a {margin:0 0 0 30px;}
+#footer .info { padding:20px 0}
+#footer .info span { padding:15px 20px;}
+#footer .info span { display:block; }
